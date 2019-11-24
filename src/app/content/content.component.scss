@@ -1,0 +1,79 @@
+:host{
+  height: 100%;
+  width: 90vw;
+  max-width: 600px;
+  margin: 0px auto;
+  display: flex;
+  flex-flow: column nowrap;
+  .mat-expansion-panel{
+    margin-bottom: 20px;
+    .row-pokemon{
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: center;
+      .type{
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        span{
+          margin-right: 10px;
+        }
+        app-type{
+          margin-right: 5px;
+        }
+      }
+      .icon, .name{
+        margin-right: 30px;
+      }
+      h3, span {
+        margin: 0px;
+      }
+      .name{
+        flex: 1;
+        width: 100px;
+      }
+    }
+  }
+}
+
+.content-pokemon{
+  display: grid;
+  grid-template: repeat(4, 1fr) / repeat(3, 1fr);
+  strong{
+    margin-right: 10px;
+  }
+  .total{
+    grid-column: 1 / span 2;
+    border-top: 1px solid #000;
+    padding-top: 5px;
+  }
+  .box-btn{
+    display: flex;
+    margin: auto;
+    margin-right: 0px;
+    grid-row: 1 / span 4;
+    grid-column: 3;
+    .mat-raised-button{
+      padding: 0px 35px;
+      background-color: #FF9800;
+      color: white;
+    }
+  }
+}
+
+.not-found{
+  height: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30%;
+  img{
+    width: 180px;
+  }
+  p{
+    color: #999999;
+    text-align: center;
+    font-size: 1.2em;
+  }
+}

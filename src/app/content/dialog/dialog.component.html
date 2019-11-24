@@ -1,0 +1,13 @@
+<div>
+  <ng-container *ngIf="pokemon$ | async; let pokemon;">
+    <h1 class="dialog-title">{{pokemon.name}}</h1>
+    <div class="dialog-content">
+      <img [src]="pokemon.img" [alt]="pokemon.name">
+      <p>{{pokemon.description}}</p>
+    </div>
+  </ng-container>
+  <div class="dialog-actions">
+    <button mat-button (click)="close()">Fechar</button>
+    <button mat-button cdkFocusInitial color="accent" (click)="close()">Confirmar</button>
+  </div>
+</div>

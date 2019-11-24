@@ -1,0 +1,30 @@
+:host{
+  display: flex;
+  flex-flow: column nowrap;
+  background: #507ae0;
+  height: 300px;
+  position: relative;
+  img{
+    margin: auto;
+    width: 150px;
+  }
+
+  .search-box{
+    margin: 0px auto;
+    margin-bottom: 4em;
+  }
+
+  .onda{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+    min-width: 900px;
+    bottom: 0px;
+    svg{
+      fill: var(--bg-color);
+    }
+  }
+}

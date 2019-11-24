@@ -1,0 +1,27 @@
+.dialog-title {
+  margin: 0px;
+  padding: 19px 24px;
+  max-height: 64px;
+  font-size: 21px;
+}
+
+.dialog-content {
+  margin-left: 24px;
+  margin-right: 24px;
+  display: flex;
+  flex-flow: column nowrap;
+  img{
+    --size: 232px;
+    width: var(--size);
+    height: var(--size);
+    object-fit: contain;
+  }
+
+}
+
+.dialog-actions {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+  padding: 8px;
+}

@@ -1,0 +1,38 @@
+<ng-container *ngIf="itens$ | async; let itens; else notfound">
+  <ng-container *ngFor="let pokemon of itens">
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <div class="row-pokemon">
+          <img class="icon" aria-hidden [src]="pokemon.icon">
+          <h3 class="name"> {{ pokemon.name }} </h3>
+          <div class="type">
+            <span>Type:</span>
+            <app-type *ngFor="let type of pokemon.type" [type]="type"></app-type>
+          </div>
+        </div>
+      </mat-expansion-panel-header>
+      <ng-template matExpansionPanelContent>
+        <div class="content-pokemon">
+          <div><strong>HP</strong> <span>{{pokemon.hp}}</span></div>
+          <div><strong>Attack</strong> <span>{{pokemon.attack}}</span></div>
+          <div><strong>Defense</strong> <span>{{pokemon.defense}}</span></div>
+          <div><strong>Sp. Atk</strong> <span>{{pokemon.spAtk}}</span></div>
+          <div><strong>Sp. Def</strong> <span>{{pokemon.spDef}}</span></div>
+          <div><strong>Speed</strong> <span>{{pokemon.speed}}</span></div>
+          <div class="total"><strong>Total</strong> <span>{{pokemon.total}}</span></div>
+          <div class="box-btn">
+            <button mat-raised-button color="accent" (click)="openDialog(pokemon)">VER MAIS</button>
+          </div>
+        </div>
+      </ng-template>
+    </mat-expansion-panel>
+  </ng-container>
+
+</ng-container>
+
+<ng-template #notfound>
+  <div class="not-found">
+    <img src="assets/img/404.jpg" alt="Nada aqui!">
+    <p>Você anda não realizou nenhuma busca!</p>
+  </div>
+</ng-template>

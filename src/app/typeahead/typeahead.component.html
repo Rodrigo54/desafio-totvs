@@ -1,0 +1,18 @@
+<div class="typeahead-box">
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <mat-card matAutocompleteOrigin #origin="matAutocompleteOrigin">
+      <input [formControl]="searchCtrl" [matAutocomplete]="auto" [matAutocompleteConnectedTo]="origin" type="text" placeholder="Search for Item">
+      <button type="submit" class="btn-search">
+        <mat-icon>search</mat-icon>
+      </button>
+    </mat-card>
+  </form>
+  <mat-autocomplete [displayWith]="displayWith" #auto="matAutocomplete" (optionSelected)="onSubmit()">
+    <mat-option *ngFor="let item of filteredStates$ | async" [value]="item">
+      <div class="autocomplete-option">
+        <img class="option-img" aria-hidden [src]="item.icon">
+        <span [ngClass]="item.quality">{{item.name}}</span>
+      </div>
+    </mat-option>
+  </mat-autocomplete>
+</div>
