@@ -13,6 +13,10 @@
       </mat-expansion-panel-header>
       <ng-template matExpansionPanelContent>
         <div class="content-pokemon">
+          <div class="type">
+            <span>Type:</span>
+            <app-type *ngFor="let type of pokemon.type" [type]="type"></app-type>
+          </div>
           <div><strong>HP</strong> <span>{{pokemon.hp}}</span></div>
           <div><strong>Attack</strong> <span>{{pokemon.attack}}</span></div>
           <div><strong>Defense</strong> <span>{{pokemon.defense}}</span></div>

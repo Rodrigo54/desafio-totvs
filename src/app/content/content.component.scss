@@ -15,6 +15,9 @@
         display: flex;
         flex-flow: row nowrap;
         align-items: center;
+        @media screen and (max-width: 600px) {
+          visibility: hidden;
+        }
         span{
           margin-right: 10px;
         }
@@ -38,7 +41,7 @@
 
 .content-pokemon{
   display: grid;
-  grid-template: repeat(4, 1fr) / repeat(3, 1fr);
+  grid-template: auto repeat(5, 1fr) / repeat(2, 1fr);
   strong{
     margin-right: 10px;
   }
@@ -50,13 +53,39 @@
   .box-btn{
     display: flex;
     margin: auto;
-    margin-right: 0px;
-    grid-row: 1 / span 4;
-    grid-column: 3;
+    grid-row: 6;
+    grid-column: 1 / span 2;
     .mat-raised-button{
       padding: 0px 35px;
       background-color: #FF9800;
       color: white;
+    }
+  }
+  .type{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+    grid-row: 1;
+    grid-column: 1 / span 2;
+    span{
+      margin-right: 10px;
+    }
+    app-type{
+      margin-right: 5px;
+    }
+  }
+  @media screen and (min-width: 600px) {
+    grid-template: repeat(4, 1fr) / repeat(3, 1fr);
+    .box-btn{
+      margin-right: 0px;
+      grid-row: 1 / span 4;
+      grid-column: 3;
+    }
+    .type{
+      visibility: hidden;
+      display: none;
     }
   }
 }

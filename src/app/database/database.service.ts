@@ -28,7 +28,6 @@ export class DatabaseService {
         ).subscribe(result => {
           ret.push(result);
         }).unsubscribe();
-        console.log('ret', ret);
         if (save) {
           this.pokemonsSubject.next(ret);
         }
