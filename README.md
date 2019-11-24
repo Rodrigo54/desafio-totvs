@@ -1,27 +1,20 @@
-# DesafioTotvs
+# Desafio Totvs
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.19.
+[![Netlify Status](https://api.netlify.com/api/v1/badges/1d836d6a-cd44-4e01-af3f-8846e3fef195/deploy-status)](https://app.netlify.com/sites/desafio-totvs/deploys)
 
-## Development server
+## Layout
+![tela 2](https://github.com/Rodrigo54/desafio-totvs/raw/master/src/assets/img/2.jpg)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Requisitos
 
-## Code scaffolding
+Os cards abrem/fecham quando o usuário clica no link “ver mais detalhes”.
+Caso o usuário clique no botão “ver mais” dentro do card, uma modal será aberta.
+A modal, não faz nada, qualquer opção escolhida tanto “Sim” quanto “Não” apenas deve fechá-la.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Os dados podem ser mockados ou pode ser utilizado uma API pública de sua preferência para exibir os dados que quiser.
+O layout é para te guiar! Não precisa seguir detalhadamente.
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## Diferenciais
+ - [ ] Fazer teste unitários
+ - [x] Usar Angular 7+
+ - [x] rxJs
